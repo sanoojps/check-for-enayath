@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Check.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Check_sutherlandsmbpov_ServiceNow_u_poc_snf" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://sutherlandsmbpov.service-now.com/u_poc_snf.do?SOAP</Value>
+    </Setting>
+    <Setting Name="Check_sutherlandsmbpov_toolCreatingIncident_ServiceNow_u_sgs_tool_creating_incident" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://sutherlandsmbpov.service-now.com/u_sgs_tool_creating_incident.do?SOAP</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
