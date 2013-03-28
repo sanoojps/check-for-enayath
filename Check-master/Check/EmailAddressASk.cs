@@ -107,7 +107,12 @@ namespace Check
 
             //Check theSchedule = new Check();
 
-            System.Threading.Thread LaunchScanForm = new System.Threading.Thread(ScanForm); 
+            System.Threading.Thread LaunchScanForm = new System.Threading.Thread(ScanForm);
+            //LaunchScanForm.ApartmentState = 
+            //    System.Threading.ApartmentState.STA;
+            LaunchScanForm.SetApartmentState(
+                System.Threading.ApartmentState.STA);
+
             LaunchScanForm.Name = "LaunchScanForm";
             LaunchScanForm.Start();
 
@@ -213,7 +218,7 @@ namespace Check
             this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(198)))));
             this.exitBtn.ForeColor = System.Drawing.Color.White;
             this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Hide();
+            
             
         }
 

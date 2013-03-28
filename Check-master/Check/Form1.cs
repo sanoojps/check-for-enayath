@@ -655,6 +655,40 @@ namespace Check
             this.reportIssue.Cursor = System.Windows.Forms.Cursors.Default;
         }
 
+        private void btn_fileBrowser_Click(object sender, EventArgs e)
+        {
+            System.IO.Stream myStream = null;
+            this.openFileDialog1.InitialDirectory =
+                Environment.SpecialFolder.Desktop.ToString();
+            this.openFileDialog1.Filter =
+                "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+            this.openFileDialog1.FilterIndex = 1;
+            this.openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            // Insert code to read the stream here.
+                            MessageBox.Show(
+                                System.IO.Path.
+                                GetDirectoryName(openFileDialog1.FileName).ToString()
+                                + @"/" + openFileDialog1.FileName);
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
+
         
     }
 }

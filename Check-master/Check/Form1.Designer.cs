@@ -118,6 +118,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportIssue = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.btn_fileBrowser = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -989,7 +991,7 @@
             this.reportIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reportIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportIssue.ForeColor = System.Drawing.Color.White;
-            this.reportIssue.Image = ((System.Drawing.Image)(resources.GetObject("reportIssue.Image")));
+            this.reportIssue.Image = global::Check.Properties.Resources.up_arrow_fw;
             this.reportIssue.Location = new System.Drawing.Point(723, 126);
             this.reportIssue.Name = "reportIssue";
             this.reportIssue.Size = new System.Drawing.Size(153, 35);
@@ -1012,12 +1014,33 @@
             this.progressBar1.Visible = false;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
+            // btn_fileBrowser
+            // 
+            this.btn_fileBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(198)))));
+            this.btn_fileBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_fileBrowser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_fileBrowser.ForeColor = System.Drawing.Color.White;
+            this.btn_fileBrowser.Image = ((System.Drawing.Image)(resources.GetObject("btn_fileBrowser.Image")));
+            this.btn_fileBrowser.Location = new System.Drawing.Point(723, 177);
+            this.btn_fileBrowser.Name = "btn_fileBrowser";
+            this.btn_fileBrowser.Size = new System.Drawing.Size(153, 35);
+            this.btn_fileBrowser.TabIndex = 78;
+            this.btn_fileBrowser.Text = "File Browser";
+            this.btn_fileBrowser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_fileBrowser.UseVisualStyleBackColor = false;
+            this.btn_fileBrowser.Click += new System.EventHandler(this.btn_fileBrowser_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Check
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(888, 581);
+            this.Controls.Add(this.btn_fileBrowser);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.reportIssue);
             this.Controls.Add(this.pictureBox1);
@@ -1137,6 +1160,8 @@
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Button reportIssue;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button btn_fileBrowser;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
