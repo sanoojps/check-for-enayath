@@ -53,11 +53,13 @@ namespace Check
 
         void Scan_Click(object sender, EventArgs e)
         {
-           
-            System.Threading.Thread T = new Thread(_consume.JealousSCANServ);
-            T.Name = "_consume.JealousSCANServ";
-            T.Start();
+            this.loadingBalls.Visible = true;
+            //System.Threading.Thread T = new Thread(_consume.JealousSCANServ);
+            //T.Name = "_consume.JealousSCANServ";
+            //T.Start();
+           // _consume.JealousSCANServ();
             updateScanlabel();
+            this.loadingBalls.Visible = false;
 
         }
 

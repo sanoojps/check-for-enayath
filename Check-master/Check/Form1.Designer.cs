@@ -138,7 +138,7 @@
             this.Scan.Image = ((System.Drawing.Image)(resources.GetObject("Scan.Image")));
             this.Scan.Location = new System.Drawing.Point(10, 126);
             this.Scan.Name = "Scan";
-            this.Scan.Size = new System.Drawing.Size(83, 35);
+            this.Scan.Size = new System.Drawing.Size(83, 38);
             this.Scan.TabIndex = 0;
             this.Scan.Text = "Scan";
             this.Scan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -859,9 +859,9 @@
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Location = new System.Drawing.Point(101, 70);
+            this.groupBox6.Location = new System.Drawing.Point(99, 70);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(613, 143);
+            this.groupBox6.Size = new System.Drawing.Size(615, 143);
             this.groupBox6.TabIndex = 75;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Scan Details";
@@ -1006,10 +1006,10 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(332, 23);
+            this.progressBar1.Location = new System.Drawing.Point(330, 23);
             this.progressBar1.MarqueeAnimationSpeed = 30;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(548, 23);
+            this.progressBar1.Size = new System.Drawing.Size(550, 23);
             this.progressBar1.TabIndex = 76;
             this.progressBar1.Visible = false;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
