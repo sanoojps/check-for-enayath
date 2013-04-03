@@ -7,18 +7,24 @@ using Microsoft.Win32;
 namespace Check
 {
     /// <summary>
-    /// 
+    /// registryOPs
     /// </summary>
     class registryOPs
     {
         /// <summary>
-        /// 
+        /// registryOPs
+        /// Constructor
         /// </summary>
         public registryOPs()
         {
         }
 
-       
+        /// <summary>
+        /// destructor
+        /// </summary>
+        ~registryOPs()
+        {
+        }
 
         /// <summary>
         /// eXceptionEnum
@@ -26,45 +32,45 @@ namespace Check
         #region eXceptionEnum
 
         private enum eXceptionEnum
-        { 
+        {
             QUERY_OR_WRITE_SUCCESSFUL = 0,
-            QUERIED_DEFAULT_VALUE = 1 ,
+            QUERIED_DEFAULT_VALUE = 1,
             PERMISSION_DENIED = 2,//same as SECURITY_EXCEPTION
             NULL_REFERENCE_EXCEPTION = 3,
-            IOEXCEPTION  = 4,
+            IOEXCEPTION = 4,
             ARGUMENT_EXCEPTION = 5,
             KEY_DOES_NOT_EXIST = 6,
             KEY_VALUE_NAME_DOES_NOT_EXIST = 7,
             ARGUMENT_NULL_EXCEPTION = 8,
             UNAUTHORIZED_ACCESS_EXCEPTION = 9,
             SECURITY_EXCEPTION = 10 //same as PERMISSION_DENIED
-            
+
         };
 
 
-       
 
-           
 
-            //private void eXceptionD()
-            //{
-            //    Dictionary<int, string> eXceptionDictionary =
-            //   new Dictionary<int, string>();
 
-            //    eXceptionDictionary.Add(0, "QUERY_OR_WRITE_SUCCESSFUL");
-            //    eXceptionDictionary.Add(1, "QUERIED_DEFAULT_VALUE");
-            //    eXceptionDictionary.Add(2, "PERMISSION_DENIED");
-            //    eXceptionDictionary.Add(3, "NULL_REFERENCE_EXCEPTION");
-            //    eXceptionDictionary.Add(4, "IOEXCEPTION");
-            //    eXceptionDictionary.Add(5, "ARGUMENT_EXCEPTION");
-            //    eXceptionDictionary.Add(6, "KEY_DOES_NOT_EXIST");
-            //    eXceptionDictionary.Add(7, "KEY_VALUE_NAME_DOES_NOT_EXIST");
-            //    eXceptionDictionary.Add(8, "ARGUMENT_NULL_EXCEPTION");
-            //    eXceptionDictionary.Add(9, "UNAUTHORIZED_ACCESS_EXCEPTION");
-            //    eXceptionDictionary.Add(10, "SECURITY_EXCEPTION");
-            //}
-      
-       
+
+        //private void eXceptionD()
+        //{
+        //    Dictionary<int, string> eXceptionDictionary =
+        //   new Dictionary<int, string>();
+
+        //    eXceptionDictionary.Add(0, "QUERY_OR_WRITE_SUCCESSFUL");
+        //    eXceptionDictionary.Add(1, "QUERIED_DEFAULT_VALUE");
+        //    eXceptionDictionary.Add(2, "PERMISSION_DENIED");
+        //    eXceptionDictionary.Add(3, "NULL_REFERENCE_EXCEPTION");
+        //    eXceptionDictionary.Add(4, "IOEXCEPTION");
+        //    eXceptionDictionary.Add(5, "ARGUMENT_EXCEPTION");
+        //    eXceptionDictionary.Add(6, "KEY_DOES_NOT_EXIST");
+        //    eXceptionDictionary.Add(7, "KEY_VALUE_NAME_DOES_NOT_EXIST");
+        //    eXceptionDictionary.Add(8, "ARGUMENT_NULL_EXCEPTION");
+        //    eXceptionDictionary.Add(9, "UNAUTHORIZED_ACCESS_EXCEPTION");
+        //    eXceptionDictionary.Add(10, "SECURITY_EXCEPTION");
+        //}
+
+
 
 
         #endregion
@@ -88,13 +94,14 @@ namespace Check
             string keyValueData = string.Empty;
             try
             {
-                keyValueData = Microsoft.Win32.Registry.GetValue(
+                keyValueData =
+                       Registry.GetValue(
                        keyName, keyValueName, "<Not Found>").ToString();
 
                 //value returned will be "<Not Found>" if keyValueName not found
                 //value returned will be "null" if key not found
 
-                if (keyValueData.Equals(null))    
+                if (keyValueData.Equals(null))
                 {
                     System.Diagnostics.Debug.WriteLine("\n"
                      + "Requested registry key does not exist."
@@ -148,7 +155,7 @@ namespace Check
                         readStatus = (uint)eXceptionEnum.QUERIED_DEFAULT_VALUE;
                     }
                 }//could also mean the keyValueName is (Default) and keyValueData is (value not set)
-                    //basically could be a blank entry
+                //basically could be a blank entry
                 //meaning if i query (Default) valuename it will return <Not Found>
 
                 else
@@ -167,7 +174,7 @@ namespace Check
 
 
                     readStatus = (uint)eXceptionEnum.QUERY_OR_WRITE_SUCCESSFUL;
- 
+
                 }
 
             }
@@ -234,8 +241,8 @@ namespace Check
                 keyValueData = "ArgumentException";
                 readStatus = (uint)eXceptionEnum.ARGUMENT_EXCEPTION;
             }
-               
-                return keyValueData;
+
+            return keyValueData;
         }
 
         #endregion
@@ -260,67 +267,67 @@ namespace Check
         {
             writeStatus = uint.MinValue;//ZERO
             string writeThis = string.Empty;
-            Microsoft.Win32.RegistryValueKind keyValueKind;
+            RegistryValueKind keyValueKind;
 
             switch (keyValueType)
             {
 
                 case "REG_BINARY":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.Binary;
+                    keyValueKind = RegistryValueKind.Binary;
                     break;
 
                 case "REG_DWORD":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.DWord;
+                    keyValueKind = RegistryValueKind.DWord;
                     break;
 
                 case "REG_EXPAND_SZ":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.ExpandString;
+                    keyValueKind = RegistryValueKind.ExpandString;
                     break;
 
                 case "REG_MULTI_SZ":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.MultiString;
+                    keyValueKind = RegistryValueKind.MultiString;
                     break;
 
                 case "REG_QWORD":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.QWord;
+                    keyValueKind = RegistryValueKind.QWord;
                     break;
 
                 case "REG_SZ":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.String;
+                    keyValueKind = RegistryValueKind.String;
                     break;
 
                 case "REG_DWORD_LITTLE_ENDIAN":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.DWord;
+                    keyValueKind = RegistryValueKind.DWord;
                     break;
 
                 case "REG_QWORD_LITTLE_ENDIAN":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.QWord;
+                    keyValueKind = RegistryValueKind.QWord;
                     break;
 
                 case "REG_DWORD_BIG_ENDIAN":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.Unknown;
+                    keyValueKind = RegistryValueKind.Unknown;
                     break;
 
                 case "REG_LINK":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.Unknown;
+                    keyValueKind = RegistryValueKind.Unknown;
                     break;
 
                 case "REG_RESOURCE_LIST":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.Unknown;
+                    keyValueKind = RegistryValueKind.Unknown;
                     break;
 
                 case "REG_NONE":
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.Unknown;
+                    keyValueKind = RegistryValueKind.Unknown;
                     break;
 
                 default:
-                    keyValueKind = Microsoft.Win32.RegistryValueKind.String;
+                    keyValueKind = RegistryValueKind.String;
                     break;
             }
 
             try
             {
-                Microsoft.Win32.Registry.SetValue(
+                Registry.SetValue(
                     keyName,
                     keyValueName,
                     keyValueData,
@@ -332,7 +339,7 @@ namespace Check
             }
 
 
-            catch (System.ArgumentNullException) 
+            catch (System.ArgumentNullException)
             {
                 System.Diagnostics.Debug.WriteLine("\n"
                     + " Registry Write Operation Failed "
@@ -349,7 +356,7 @@ namespace Check
                     + "\n"
 
                     );
-                writeStatus = (uint)eXceptionEnum.ARGUMENT_NULL_EXCEPTION; 
+                writeStatus = (uint)eXceptionEnum.ARGUMENT_NULL_EXCEPTION;
             }
 
             catch (System.ArgumentException)
@@ -360,9 +367,9 @@ namespace Check
                     + "'keyValueName' does not begin with a valid registry root "
                     + "\n"
                     + "'keyValueName' is longer than the maximum length allowed (255 characters). "
-                    +"\n"
+                    + "\n"
                     + "The type of value did not match the registry data type specified by valueKind, therefore the data could not be converted properly."
-                    +"\n"
+                    + "\n"
                     + "RegistryKey : " + keyName
                     + "\n"
                     + "keyValueName : " + keyValueName
@@ -373,7 +380,7 @@ namespace Check
                     + "\n"
 
                     );
-                writeStatus = (uint)eXceptionEnum.ARGUMENT_EXCEPTION; 
+                writeStatus = (uint)eXceptionEnum.ARGUMENT_EXCEPTION;
             }
 
             catch (System.UnauthorizedAccessException)
@@ -393,7 +400,7 @@ namespace Check
                     + "\n"
 
                     );
-                writeStatus = (uint)eXceptionEnum.UNAUTHORIZED_ACCESS_EXCEPTION; 
+                writeStatus = (uint)eXceptionEnum.UNAUTHORIZED_ACCESS_EXCEPTION;
             }
 
             catch (System.Security.SecurityException)
@@ -416,7 +423,7 @@ namespace Check
                 writeStatus = (uint)eXceptionEnum.SECURITY_EXCEPTION;
             }
 
-            catch (System.NullReferenceException) 
+            catch (System.NullReferenceException)
             {
                 System.Diagnostics.Debug.WriteLine("\n"
                     + " Registry Write Operation Failed "
