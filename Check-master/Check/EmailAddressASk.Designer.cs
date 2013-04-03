@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmailAddressASk));
             this.lblEmailID = new System.Windows.Forms.Label();
-            this.Proceed = new System.Windows.Forms.Button();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.companyName = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.exitBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Proceed = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmailID
@@ -50,24 +50,6 @@
             this.lblEmailID.Size = new System.Drawing.Size(191, 15);
             this.lblEmailID.TabIndex = 0;
             this.lblEmailID.Text = "Please Enter your Email ID : ";
-            // 
-            // Proceed
-            // 
-            this.Proceed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(64)))), ((int)(((byte)(66)))));
-            this.Proceed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Proceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Proceed.Image = ((System.Drawing.Image)(resources.GetObject("Proceed.Image")));
-            this.Proceed.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Proceed.Location = new System.Drawing.Point(341, 88);
-            this.Proceed.Name = "Proceed";
-            this.Proceed.Size = new System.Drawing.Size(24, 21);
-            this.Proceed.TabIndex = 7;
-            this.Proceed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Proceed.UseVisualStyleBackColor = false;
-            this.Proceed.Click += new System.EventHandler(this.Proceed_Click);
-            this.Proceed.MouseEnter += new System.EventHandler(this.Proceed_MouseEnter);
-            this.Proceed.MouseLeave += new System.EventHandler(this.Proceed_MouseLeave);
             // 
             // txtBoxEmail
             // 
@@ -80,17 +62,6 @@
             this.txtBoxEmail.TabIndex = 6;
             this.txtBoxEmail.Text = "EmailID";
             this.txtBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(341, 61);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // label1
             // 
@@ -157,6 +128,35 @@
             this.exitBtn.MouseLeave += new System.EventHandler(this.exitBtn_MouseLeave);
             this.exitBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.exitBtn_MouseUp);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(341, 61);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // Proceed
+            // 
+            this.Proceed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(64)))), ((int)(((byte)(66)))));
+            this.Proceed.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Proceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Proceed.Image = global::Check.Properties.Resources.rightarrowfw;
+            this.Proceed.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Proceed.Location = new System.Drawing.Point(341, 88);
+            this.Proceed.Name = "Proceed";
+            this.Proceed.Size = new System.Drawing.Size(24, 21);
+            this.Proceed.TabIndex = 7;
+            this.Proceed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Proceed.UseVisualStyleBackColor = false;
+            this.Proceed.Click += new System.EventHandler(this.Proceed_Click);
+            this.Proceed.MouseEnter += new System.EventHandler(this.Proceed_MouseEnter);
+            this.Proceed.MouseLeave += new System.EventHandler(this.Proceed_MouseLeave);
+            // 
             // EmailAddressASk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -179,9 +179,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmailAddressASk";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmailAddressASk_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -120,6 +120,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btn_fileBrowser = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -127,6 +128,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Scan
@@ -135,10 +137,10 @@
             this.Scan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Scan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Scan.ForeColor = System.Drawing.Color.White;
-            this.Scan.Image = ((System.Drawing.Image)(resources.GetObject("Scan.Image")));
+            this.Scan.Image = global::Check.Properties.Resources.rightarrowfw;
             this.Scan.Location = new System.Drawing.Point(10, 126);
             this.Scan.Name = "Scan";
-            this.Scan.Size = new System.Drawing.Size(83, 38);
+            this.Scan.Size = new System.Drawing.Size(83, 40);
             this.Scan.TabIndex = 0;
             this.Scan.Text = "Scan";
             this.Scan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -859,9 +861,9 @@
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Location = new System.Drawing.Point(99, 70);
+            this.groupBox6.Location = new System.Drawing.Point(146, 70);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(615, 143);
+            this.groupBox6.Size = new System.Drawing.Size(568, 143);
             this.groupBox6.TabIndex = 75;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Scan Details";
@@ -991,7 +993,7 @@
             this.reportIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reportIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportIssue.ForeColor = System.Drawing.Color.White;
-            this.reportIssue.Image = global::Check.Properties.Resources.up_arrow_fw;
+            this.reportIssue.Image = global::Check.Properties.Resources.uparrowfw;
             this.reportIssue.Location = new System.Drawing.Point(723, 126);
             this.reportIssue.Name = "reportIssue";
             this.reportIssue.Size = new System.Drawing.Size(153, 35);
@@ -1020,7 +1022,7 @@
             this.btn_fileBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_fileBrowser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fileBrowser.ForeColor = System.Drawing.Color.White;
-            this.btn_fileBrowser.Image = ((System.Drawing.Image)(resources.GetObject("btn_fileBrowser.Image")));
+            this.btn_fileBrowser.Image = global::Check.Properties.Resources.rightarrowfw;
             this.btn_fileBrowser.Location = new System.Drawing.Point(723, 177);
             this.btn_fileBrowser.Name = "btn_fileBrowser";
             this.btn_fileBrowser.Size = new System.Drawing.Size(153, 35);
@@ -1034,12 +1036,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(100, 128);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox2.TabIndex = 79;
+            this.pictureBox2.TabStop = false;
+            // 
             // Check
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(888, 581);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_fileBrowser);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.reportIssue);
@@ -1068,6 +1079,7 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1162,6 +1174,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btn_fileBrowser;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

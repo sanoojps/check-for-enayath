@@ -63,9 +63,9 @@ namespace Check.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down_arrow_fw {
+        internal static System.Drawing.Bitmap _301__5_ {
             get {
-                object obj = ResourceManager.GetObject("down-arrow.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("_301__5_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Check.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left_arrow_fw {
+        internal static System.Drawing.Bitmap downarrowfw {
             get {
-                object obj = ResourceManager.GetObject("left-arrow.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("downarrowfw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Check.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap right_arrow_fw {
+        internal static System.Drawing.Bitmap leftarrowfw {
             get {
-                object obj = ResourceManager.GetObject("right-arrow.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("leftarrowfw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,19 @@ namespace Check.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap up_arrow_fw {
+        internal static System.Drawing.Bitmap rightarrowfw {
             get {
-                object obj = ResourceManager.GetObject("up-arrow.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("rightarrowfw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uparrowfw {
+            get {
+                object obj = ResourceManager.GetObject("uparrowfw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

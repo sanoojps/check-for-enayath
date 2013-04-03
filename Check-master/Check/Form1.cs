@@ -35,7 +35,6 @@ namespace Check
             this.Owner = new EmailAddressASk();
             this.pipeClient = new EmailAddressASk();
             this.pipeClient.MessageReceived += pipeClient_MessageReceived;
-
         }
 
         void pipeClient_MessageReceived(string message)
@@ -53,13 +52,13 @@ namespace Check
 
         void Scan_Click(object sender, EventArgs e)
         {
-            this.loadingBalls.Visible = true;
+            this.pictureBox2.Image = Properties.Resources._301__5_;
             //System.Threading.Thread T = new Thread(_consume.JealousSCANServ);
             //T.Name = "_consume.JealousSCANServ";
             //T.Start();
            // _consume.JealousSCANServ();
             updateScanlabel();
-            this.loadingBalls.Visible = false;
+            this.pictureBox2.Image = null;
 
         }
 
