@@ -50,16 +50,22 @@ namespace Check
         }
 
 
+
+        
+
+
         void Scan_Click(object sender, EventArgs e)
         {
-            this.pictureBox2.Image = Properties.Resources._301__5_;
+            this.pictureBox2.Image =
+                Properties.Resources._301__5_;
+
             //System.Threading.Thread T = new Thread(_consume.JealousSCANServ);
             //T.Name = "_consume.JealousSCANServ";
             //T.Start();
-           // _consume.JealousSCANServ();
+            _consume.JealousSCANServ();
+
             updateScanlabel();
             this.pictureBox2.Image = null;
-
         }
 
         private void Fix_Click(object sender, EventArgs e)
@@ -79,8 +85,8 @@ namespace Check
         private void updateScanlabel()
         {
            
-            this.progressBar1.Value = 35;
-            this.progressBar1.Show();
+           this.progressBar1.Value = 65;
+           this.progressBar1.Show();
 
 
             CheckServ servistatus = new CheckServ();
@@ -260,7 +266,7 @@ namespace Check
             
             this.label34.Text = ":       " + data;
 
-            this.progressBar1.Value = 75;
+           this.progressBar1.Value = 75;
 
             string pcModel = string.Empty;
             string pcName = string.Empty;
@@ -362,7 +368,7 @@ namespace Check
             
             this.label71.Text = srservice_status;
 
-            this.progressBar1.Value = 85;
+           this.progressBar1.Value = 85;
 
             //read name company name
              string data_name = string.Empty;
@@ -377,8 +383,8 @@ namespace Check
             this.label76.Text = ":       " + data_name;
 
 
-            this.progressBar1.Value = 100;
-            this.progressBar1.Hide();
+           this.progressBar1.Value = 100;
+           this.progressBar1.Hide();
 
 
         }
